@@ -1,5 +1,5 @@
 /*
- * DTrace example #02 with USDT probes at main
+ * DTrace example #01 with USDT probes at main
  *
  * @author Veniamin Gvozdikov <vg@FreeBSD.org>
  */

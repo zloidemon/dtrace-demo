@@ -61,8 +61,7 @@ int length_fast(char *string)
 	if (DEMO_START_ENABLED())
 		DEMO_START(string);
 
-	for (i = 0; '\0' != *string; ++i)
-	{
+	for (i = 0; '\0' != *string; ++i) {
 		++string;
 	}
 	if (DEMO_STOP_ENABLED())
@@ -77,8 +76,7 @@ int length_slow(char *string)
 	if (DEMO_START_ENABLED())
 		DEMO_START(string);
 
-	for (i = 0; '\0' != *string; ++i)
-	{
+	for (i = 0; '\0' != *string; ++i) {
 		++string;
 		usleep(i*i);
 	}
