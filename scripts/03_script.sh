@@ -1,4 +1,4 @@
-#!/usr/sbin/dtrace -sZ
+#!/usr/sbin/dtrace -Zs
 
 #pragma D option quiet
 
@@ -19,7 +19,7 @@ demo*:::stop
 {
 	printf("String: %10s len: %2d time: %6d\n",
 		args[0]->str, args[0]->len, timestamp - self->ts);
-	@[arg0] = quantize((timestamp - self->ts) / 1000); /* microseconds */
+	@[args[0]->str] = quantize((timestamp - self->ts) / 1000); /* microseconds */
 	self->ts = 0;
 }
 
